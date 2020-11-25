@@ -1,5 +1,21 @@
 // Place your Sass imports here...
 
-body{
-    background-color: red;
-}
+// variables
+
+@import 'vars';
+
+// resets
+
+@import 'typography';
+@import 'resets';
+
+// HTML Components
+
+@import 'header';
+@import 'nav';
+@import 'body';
+@import 'wrapper';
+@import 'sections';
+@import 'blogposts';
+@import 'sidebar';
+@import 'footer';

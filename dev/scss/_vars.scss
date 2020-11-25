@@ -1,0 +1,37 @@
+// colors
+
+// left and right outside nav color, footer
+
+$darkBlue: #005991;
+
+// nav, side bar (and image border), heading and button color, 
+
+$lightBlue: #1a71a9;
+
+// search bar colors
+
+$lightGrey: #dedede; // inner
+$darkGrey: #d9d9d9; // border
+$darkestGrey: #757575; // search text
+$darkTeal: #366b8d; // search icon 
+
+// background colors 
+
+$sideGrey: #e9e9e9; // side bar grey background
+$mainGrey: #dfdfdf; // in between sections
+
+// dimensions
+
+$siteWidth: 1000px;
+
+// breakpoints
+
+// 500px
+// 670px
+// 700px adds the social icons
+// 770 sidebars on right
+
+$mobileMedium: 500px;
+$mobileLarge: 670px;
+$tabletSmall: 700px;
+$tabletLarge: 770px;
