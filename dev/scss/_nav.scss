@@ -1,0 +1,59 @@
+nav {
+    /* dont show nav by default */
+    display: none;
+}
+.show header nav {
+    /* let javascript
+    enable/disable this rule which 
+    will toggle display of the nav
+    */
+    display: block;
+    width: 100%;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: $lightGrey;
+    border: 1px solid $darkestGrey;
+    align-items: center;
+    padding: 8px;
+    height: 40px;
+}
+
+p.search{
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-ul{
+    padding-left: 0;
+}
+
+.nav-ul li{
+    background-color: $lightBlue;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid $darkBlue;
+}
+
+.social-links ul{
+    display: flex;
+    border-bottom: 2px solid $lightBlue;
+    margin: 0;
+    height: 30px;
+}
+
+.social-links li{
+    border-bottom: 2px solid $lightBlue;
+    list-style-type: none;
+}
