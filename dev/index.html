@@ -15,91 +15,117 @@
 	<link rel="stylesheet" href="styles/styles.css?cb=1">
 </head>
 <body>
-<div class="wrapper">
 
 	<header>
 
 		<div class="top-header">
 
-		<a href="index.html">
-			<img id="large-logo" src="images/logo.png" alt="Food Explorer Logo">
-			<img id="small-logo" src="images/small-logo.jpg" alt="Small Food Explorer Logo">
-		</a>
-		
-		<button class="btn-menu"><img src="images/menu.png"></button>
-
-		</div>
-		<nav>
-
-			<div class="search-bar">
+			<a href="index.html">
+				<img id="large-logo" src="images/logo.png" alt="Food Explorer Logo">
+				<img id="small-logo" src="images/small-logo.jpg" alt="Small Food Explorer Logo">
+			</a>
+			
+			<div class="search-bar" id="search-bar-top">
 				<p class="search">Search</p>
 				<img src="images/search.png">
 			</div>
 
-			<ul class="nav-ul">
-				<li><a href="#0">Home</a></li>
-				<li><a href="#0">About</a></li>
-				<li><a href="#0">Reviews</a></li>
-				<li><a href="#0">Recipes</a></li>
-				<li><a href="#0">Contact</a></li>
-			</ul>
 
-			<div class="social-links social-links-desktop">
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+			<button class="hamburger"><img src="images/menu.png"></button>
+
+			<nav>
+
+				<div class="search-bar">
+					<p class="search">Search</p>
+					<img src="images/search.png">
+				</div>
+
+				<ul class="nav-ul-small">
+					<li><a href="#0">Home</a></li>
+					<li><a href="#0">About</a></li>
+					<li><a href="#0">Reviews</a></li>
+					<li><a href="#0">Recipes</a></li>
+					<li><a href="#0">Contact</a></li>
 				</ul>
-			</div>
 
-		</nav>
+				<div class="social-links social-links-desktop">
+					<ul>
+						<li>
+							<a href="#0" class="social-link facebook">
+								<i aria-hidden="true" class="fab fa-facebook-f"></i>
+								<span class="sr-only">Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a href="#0" class="social-link google">
+								<i aria-hidden="true" class="fab fa-google"></i>
+								<span class="sr-only">Google</span>
+							</a>
+						</li>
+						<li>
+							<a href="#0" class="social-link twitter">
+								<i aria-hidden="true" class="fab fa-twitter"></i>
+								<span class="sr-only">Twitter</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
 
 	</header>
+
+	<div class="nav-large">
+		<ul class="nav-ul-large">
+			<li><a href="#0">Home</a></li>
+			<li><a href="#0">About</a></li>
+			<li><a href="#0">Reviews</a></li>
+			<li><a href="#0">Recipes</a></li>
+			<li><a href="#0">Contact</a></li>
+
+			<div class="search-bar" id="search-bar-nav">
+				<p class="search">Search</p>
+				<img src="images/search.png">
+			</div>
+
+		</ul>
+	</div>
+
+	
+
+		<div class="wrapper">
+		
 <!-- Put your HTML code here... -->
 	<main>
 
-		<section class="menu-images">
+		<section class="image-container">
 
-			<div class="top-image" id="mussels-image">
-				<img src="images/mussel.jpg" alt="mussels in a bowl">
-				<h3>Lorem Ipsum Dolor Sit</h3>
+			<div class="image" id="mussels-image">
+				<img class="image-image" id="mussel-small" src="images/mussel-small.jpg" alt="mussels in a bowl">
+				<img class="image-image" id="mussel-large" src="images/mussel.jpg" alt="mussels in a bowl">
+				<h3 class="image-title">Lorem Ipsum Dolor Sit</h3>
 			</div>
 			
-			<div class="top-image" id="salad-image">
-				<img src="images/salad.jpg" alt="vegetable salad">
-				<h3>Lorem, Ipsum Dolor</h3>
+			<div class="image" id="salad-image">
+				<img class="image-image" src="images/salad.jpg" alt="vegetable salad">
+				<h3 class="image-title">Lorem, Ipsum Dolor</h3>
 			</div>
 
-			<div class="top-image" id="pancake-image">
-				<img src="images/pancake.jpg">
-				<h3>Sit Amet Consectetur</h3>
-			</div>
-
-		</section>
-
-		<section class="blog-posts" id="first-post">
-
-			<div class="post" id="pasta-post">
-				<h2>Lorem Ipsum Dolor Sit Amet</h2>
-				<h5>Posted by Mike Lee on Sunday, August 25, 2013</h5>
-
-				<img src="images/pasta.jpg" alt="pasta in bowl">
-
-				<p>Loreum ipsum sit amet, consecteteur adipisicing elit. 
-				Incidunt, ab aspernatur illum odio nesciunt nisi eius aperiam sint.</p>
-
-				<div class="more-btn">
-					<h4>Read More...</h4>
-				</div>
+			<div class="image" id="pancake-image">
+				<img class="image-image" src="images/pancake.jpg">
+				<h3 class="image-title">Sit Amet Consectetur</h3>
 			</div>
 
 		</section>
 
 		<section class="side-bar" id="latest-recipes">
 
+			<h3 class="side-bar-title">Latest Recipes</h3>
+
 			<div class="recipes" id="lamb">
 				<img src="images/lamb-tb.jpg">
-				<h6>Met Consectetur Elit</h6>
+				<h6>Met Consec tetur Elit</h6>
 			</div>
 
 			<div class="recipes" id="breakfast">
@@ -120,6 +146,8 @@
 		</section>
 
 		<section class="side-bar" id="cuisines">
+
+			<h3 class="side-bar-title">Cuisines</h3>
 
 			<ul class="cuisine-list">
 				<li><a href="#0">American (95)</a></li>
@@ -144,11 +172,30 @@
 
 		</section>
 
-		<section class="blog-posts" id="second-post">
+		<section class="blog-posts" id="first-post">
 
 			<div class="post" id="pasta-post">
 				<h2>Lorem Ipsum Dolor Sit Amet</h2>
 				<h5>Posted by Mike Lee on Sunday, August 25, 2013</h5>
+
+				<img src="images/pasta.jpg" alt="pasta in bowl">
+
+				<p>Loreum ipsum sit amet, consecteteur adipisicing elit. 
+				Incidunt, ab aspernatur illum odio nesciunt nisi eius aperiam sint.</p>
+
+				<div class="more-btn">
+					<h4>Read More...</h4>
+				</div>
+			</div>
+
+		</section>
+
+
+		<section class="blog-posts" id="second-post">
+
+			<div class="post" id="ramen-post">
+				<h2>Vel, Eaque Quisquiam Sit Amet</h2>
+				<h5>Posted by Mike Lee on Monday, July 29, 2013</h5>
 
 				<img src="images/ramen.jpg" alt="ramen in bowl">
 
@@ -168,6 +215,8 @@
 
 	</main>
 
+</div>
+
 	<footer>
 		<p>&copy; 2013 Site designer by Michael Lee. For educational purpose only. 
 			<span class="credits">
@@ -176,7 +225,7 @@
 		</p>
 	</footer>
 
-</div>
+
 <!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
 <script src="scripts/libs/jquery/jquery-3.4.1.min.js"></script>
 <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->

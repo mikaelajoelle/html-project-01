@@ -1,59 +1,152 @@
-nav {
-    /* dont show nav by default */
-    display: none;
-}
-.show header nav {
-    /* let javascript
-    enable/disable this rule which 
-    will toggle display of the nav
-    */
-    display: block;
-    width: 100%;
-}
+
 
 .search-bar{
     display: flex;
     justify-content: space-between;
     background-color: $lightGrey;
-    border: 1px solid $darkestGrey;
     align-items: center;
     padding: 8px;
-    height: 40px;
 }
 
 p.search{
-    line-height: 40px;
-    height: 40px;
     text-align: center;
-    margin-bottom: 0;
-}
-
-nav a{
-    text-decoration: none;
-    color: white;
-}
-
-.nav-ul{
-    padding-left: 0;
-}
-
-.nav-ul li{
-    background-color: $lightBlue;
-    list-style-type: none;
-    padding-left: 0;
-    text-align: center;
-    padding: 10px;
-    border-top: 2px solid $darkBlue;
-}
-
-.social-links ul{
-    display: flex;
-    border-bottom: 2px solid $lightBlue;
     margin: 0;
-    height: 30px;
+    padding: 0;
 }
 
-.social-links li{
-    border-bottom: 2px solid $lightBlue;
-    list-style-type: none;
+
+nav {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 100%;
+    transition: height 0.3s ease, visibility 0s 0.3s;
 }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+nav a {
+    line-height: 40px;
+    border-bottom: 1px solid $darkBlue;
+    border-top: 1px solid $darkBlue;
+    padding: 0 20px;
+    color: white;
+    background-color: $lightBlue;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    background-color: white;
+    color: $lightBlue;
+}
+
+nav li:last-child a {
+    border-bottom: 1px solid #afafaf;
+}
+
+.show nav {
+    visibility: visible;
+    height: 250px;
+    transition: height 0.3s ease, visibiliy 0s;
+}
+
+/* Hamburger Styles */
+.hamburger {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    margin: 0;
+    width: 55px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.hamburger:focus,
+.hamburger-icon:focus {
+    outline: none;
+}
+
+.nav-ul-large{
+    display: none;
+}
+
+
+@media (min-width: $tabletSmall){
+
+    nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .nav-large{
+        background-color: $darkBlue;
+    }
+
+    .nav-ul-large{
+        display: grid;
+        max-width: $siteWidth;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-between;
+        background-color: $darkBlue;
+        height: 45px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        z-index: 9999;
+        margin: 0 auto;
+
+
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: $lightBlue;
+            line-height: 45px;
+            display: block;
+            text-align: center;
+            transition: 0.5s ease;
+        }   
+    }
+
+    .nav-ul-large a:hover,
+    .nav-ul-large a:focus,
+    .nav-ul-large a:active {
+        background-color: white;
+        color: $lightBlue;
+    }
+
+}
+
+@media (min-width: $desktopSmall){
+
+    .nav-ul-large{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .search-bar{
+        width: 25vw;
+        max-width: 350px;
+        box-shadow: inset 0px 0px 3px 1px $darkGrey;
+    }
+
+}
+

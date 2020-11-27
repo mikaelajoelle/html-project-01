@@ -1,9 +1,35 @@
-// Write your JavaScript here...
+// JavaScript Document
 
-// hamburger menu
+var $btn = $('button');
+var $nav = $('nav');
+var $navUl = $('nav > ul');
 
+$btn.click(function(){
+	$navUl.toggleClass('open');	
+});
+
+// The following JS modified from 
+// JS found at this per: http://codepen.io/laviperchik/pen/dlcBt
+$.fn.accessibleDropDown = function () {
+    
+	var el = $(this);
+
+    /* Make dropdown menus keyboard accessible */
+
+    el.find('a').focus(function() {
+        $(this).parents("li").addClass("hover");
+    }).blur(function() {
+        $(this).parents("li").removeClass("hover");
+    });
+
+}
+
+$nav.accessibleDropDown();
+
+
+// Show Mobile Navigation
 const body = document.body;
-const btn = document.querySelector('.btn-menu');
+const btn = document.querySelector('.hamburger');
 
 btn.addEventListener('click', function(){
     body.classList.toggle('show');

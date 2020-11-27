@@ -1,0 +1,197 @@
+section{
+    margin: 10px;
+}
+
+
+// top images
+
+.image-container {
+    max-width: 1020px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+
+#mussel-large{
+    display: none;
+}
+
+.image {
+    position: relative;
+}
+
+.image-image {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(2, 2, 2, 0.487);
+    color: white;
+    text-transform: uppercase;
+}
+
+// recipe side bar
+
+.recipes{
+    display: flex;
+    padding: 15px;
+
+    img{
+        outline: 3px solid $lightBlue;
+        margin-right: 15px;
+    }
+}
+
+.side-bar-title{
+    text-transform: uppercase;
+    background-color: $lightBlue;
+    color: white;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+#lamb, #calamari{
+    background-color: white;
+}
+
+#breakfast, #steak{
+    background-color: $sideGrey;
+}
+
+// cuisines side bar
+
+.cuisine-list a{
+    text-decoration: none;
+    line-height: 1.8em;
+    color: black;
+}
+    ul{
+        list-style-position: inside;
+        padding: 10px;
+        background-color: white;
+        margin: 0;
+        max-height: 275px;
+        display: grid;
+        grid-template-columns: 150px 150px
+
+    }
+
+        li{
+            list-style-type: none;
+        }
+
+// blog posts
+
+.blog-posts{
+    background-color: white;
+    padding: 10px;
+}
+
+    p{
+        padding-top: 10px;
+    }
+
+h4{
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: $mobileLarge){
+
+    #mussel-small{
+        display: none;
+    }
+
+    #mussel-large{
+        display: block;
+        
+    }
+
+    .image img{
+        height: 240px;
+    }
+}
+
+@media (min-width: $tabletSmall){
+
+    .cuisine-list{
+        grid-template-columns: 150px 150px 150px;
+    }
+}
+
+@media (min-width: $tabletMedium){
+
+    .image-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+        grid-template-areas: 
+            "one one"
+            "two three";
+    }
+
+    #mussels-image{
+        grid-area: one;
+    }
+
+    #salad-image{
+        grid-area: two;
+    }
+
+    #pancake-image{
+        grid-area: three;
+    }
+
+    .blog-posts{
+        padding: 20px;
+    }
+}
+
+@media (min-width: $desktopSmall){
+
+    main{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 1fr 410px 400px 100px;
+
+    }
+
+    section{
+        margin-top: 0;
+    }
+
+    #latest-recipes{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #cuisines{
+        grid-row-start: 2;
+        grid-column-start: 2;
+        margin-left: 0;
+    }
+
+    .cuisine-list{
+        grid-template-columns: 250px;
+        max-height: 600px;
+    }
+
+    #second-post{
+        grid-row-start: 3;
+        margin-bottom: 0px;
+    }
+
+    .older-posts{
+        grid-row-start: 4;
+    }
+}

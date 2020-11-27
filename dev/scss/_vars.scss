@@ -11,7 +11,7 @@ $lightBlue: #1a71a9;
 // search bar colors
 
 $lightGrey: #dedede; // inner
-$darkGrey: #d9d9d9; // border
+$darkGrey: #bebebe; // border
 $darkestGrey: #757575; // search text
 
 // sidebar odd background color
@@ -26,8 +26,8 @@ $siteWidth: 1000px;
 
 
 
-$mobileLarge: 360px; // logo change from FE to full
-$tabletSmall: 500px;
+$mobileLarge: 330px; // logo change from FE to full
+$tabletSmall: 500px; // search bar no more hamburger menu
 $tabletMedium: 670px;
 $tabletLarge: 700px; // with social icons
 $desktopSmall: 780px; // sidebars on right
