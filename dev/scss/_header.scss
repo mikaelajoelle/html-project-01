@@ -69,9 +69,17 @@ header{
     }
 }
 
+@media (min-width: $tabletLarge){
+
+    #search-bar-top{
+        margin-right: 0px;
+    }
+}
+
 @media (min-width: $desktopSmall){
 
     #search-bar-top{
         display: none;
     }
+    
 }
