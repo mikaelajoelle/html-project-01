@@ -1,7 +1,6 @@
 .top-header{
     max-width: 980px;
     margin: 0 auto;
-    
 }
 
 header{
@@ -10,7 +9,6 @@ header{
 
 #large-logo{
     display: none;
-    
 }
 
 #small-logo{
@@ -21,7 +19,6 @@ header{
     display: none;
 }
 
-
 .top-header {
     display: flex;
     flex-wrap: wrap;
@@ -29,7 +26,6 @@ header{
     justify-content: space-between;
     background-color: white;
     width: 100%;
-    
 }
 
 @media (min-width: $mobileLarge){
@@ -43,8 +39,6 @@ header{
         max-width: 225px;
         padding-left: 10px;
     }
-
-
 }
 
 @media (min-width: $tabletSmall){
@@ -55,12 +49,7 @@ header{
         margin-right: 10px;
         border-radius: 5px;
         box-shadow: inset 0px 0px 3px 1px $darkGrey;
-
-        p{
-            text-align: left;
-        }
     }
-
 
     #large-logo{
         max-width: 300px;
@@ -81,5 +70,4 @@ header{
     #search-bar-top{
         display: none;
     }
-    
 }

@@ -1,0 +1,73 @@
+// side bar
+
+.recipes{
+    display: flex;
+    padding: 15px;
+
+    img{
+        outline: 3px solid $lightBlue;
+        margin-right: 15px;
+    }
+}
+
+.side-bar-title{
+    text-transform: uppercase;
+    background-color: $lightBlue;
+    color: white;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+#lamb, #calamari{
+    background-color: white;
+}
+
+#breakfast, #steak{
+    background-color: $sideGrey;
+}
+
+// cuisines side bar
+
+.cuisine-list a{
+    text-decoration: none;
+    line-height: 1.8em;
+    color: black;
+}
+    ul{
+        padding: 10px;
+        background-color: white;
+        margin: 0;
+        max-height: 275px;
+        display: grid;
+        grid-template-columns: 150px 150px
+    }
+
+        li{
+            list-style-type: none;
+        }
+
+@media (min-width: $tabletSmall){
+
+    .cuisine-list{
+        grid-template-columns: 150px 150px 150px;
+    }
+}
+
+@media (min-width: $desktopSmall){
+
+    #latest-recipes{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #cuisines{
+        grid-row-start: 2;
+        grid-column-start: 2;
+        margin-left: 0;
+    }
+
+    .cuisine-list{
+        grid-template-columns: 250px;
+        max-height: 600px;
+    }
+}

@@ -1,3 +1,5 @@
+// general search bar styles
+
 .search-bar{
     display: flex;
     justify-content: space-between;
@@ -6,12 +8,14 @@
     padding: 8px;
 }
 
-p.search{
-    text-align: center;
-    margin: 0;
-    padding: 0;
+.input-search{
+    border: none;
+    outline: none;
+    background-color: $lightGrey;
+    width: 70px;
 }
 
+// mobile nav
 
 nav {
     height: 0;
@@ -19,6 +23,7 @@ nav {
     visibility: hidden;
     width: 100%;
     transition: height 0.3s ease, visibility 0s 0.3s;
+    border-bottom: 1px solid $lightBlue;
 }
 
 nav ul {
@@ -84,35 +89,47 @@ nav li:last-child a {
     display: none;
 }
 
+// social links inside nav
+
+
+
 .social-links ul{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    width: 100px;
     height: 42px;
-    background-color: white;
-    margin: 0;
-    padding-left: 180px;
-    padding-right: 180px;
-    border-bottom: 1px solid $lightBlue;
+    justify-content: space-between;
+    background-color: transparent;
+    margin: auto;
+    border: none;
+    overflow: hidden;
 
     .social-link{
         border: none;
     }
 
-        a{
-            background-color: white;
-            color: $lightBlue;
-            border: none;
-            outline: none;
-            padding: 0px 5px 0px 5px;
-            margin: 0;
-            font-size: 1.3em;
-        }
+    a{
+        text-align: center;
+        background-color: white;
+        color: $lightBlue;
+        border: none;
+        outline: none;
+        padding: 0px 7px 0px 7px;
+        margin: 0;
+        font-size: 1.3em;
+    }
+
+    a:hover{
+        color: $lightGrey;
+    }
+    
 }
+
 
 .social-links-top{
    display: none;
 }
+
+// media queries
 
 @media (min-width: $tabletSmall){
 
@@ -134,7 +151,7 @@ nav li:last-child a {
         grid-template-columns: repeat(5, 1fr);
         justify-content: space-between;
         background-color: $darkBlue;
-        height: 45px;
+        height: 40px;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 0;
@@ -147,7 +164,7 @@ nav li:last-child a {
             text-decoration: none;
             color: white;
             background-color: $lightBlue;
-            line-height: 45px;
+            line-height: 40px;
             display: block;
             text-align: center;
             transition: 0.5s ease;
@@ -160,7 +177,6 @@ nav li:last-child a {
         background-color: white;
         color: $lightBlue;
     }
-
 }
 
 @media(min-width: $tabletLarge){
@@ -179,15 +195,20 @@ nav li:last-child a {
             border: none;
         }
     
-            a{
-                background-color: white;
-                color: $lightBlue;
-                border: none;
-                outline: none;
-                padding: 8px;
-                margin: 0;
-                font-size: 1.3em;
-            }
+        a{
+            background-color: white;
+            color: $lightBlue;
+            border: none;
+            outline: none;
+            padding: 8px;
+            margin: 0;
+            font-size: 1.3em;
+        }
+
+    }
+
+    .social-links-top a:hover, .social-links-top a:active{
+        color: $darkGrey;
     }
 }
 
@@ -202,6 +223,5 @@ nav li:last-child a {
         max-width: 350px;
         box-shadow: inset 0px 0px 3px 1px $darkGrey;
     }
-
 }
 
